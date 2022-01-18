@@ -1,4 +1,4 @@
-PHP在线客服聊天系统
+在线客服聊天系统
 ===============
 ##### 最近在看workerman，因此采用GatewayWorker写了一个简易的在线客户聊天系统。仅供学习，写的不好，欢迎指点。参考采用tp5+mysql+php7.4+GatewayWorker+websocket
 
