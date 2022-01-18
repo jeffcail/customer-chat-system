@@ -289,7 +289,7 @@ class Chat extends Controller
                    'username' => $res['fromname'],
                    'countNoread' => $this->getCountNoRead($res['fromid'], $res['toid']),
                    'last_message' => $this->getLastMessage($res['fromid'], $res['toid']),
-                   'chat_page' => "http://chat2.com/?fromid={$res['toid']}&toid={$res['fromid']}"
+                   'chat_page' => "http://chat.com/?fromid={$res['toid']}&toid={$res['fromid']}"
                ];
             }, $info);
         }

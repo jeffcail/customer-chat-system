@@ -20,12 +20,22 @@ PHP在线客服聊天系统
 + 历史聊天记录 等
 
 > 采用docker搭建开发环境。
-> docker环境搭建，可网上自行搜索。或者参考我的个人博客 http://bg.caixiaoxin.cn/?p=94
+> docker环境搭建，可网上自行搜索。或者参考我的个人博客 [docker-lnmp](http://blog.caixiaoxin.cn/?p=94)
 
 
 
-### php start.php start
+### step
+1. 配置域名
 
-![](http://bg.caixiaoxin.cn/wp-content/uploads/2021/12/chat-list-211x300.png)
+2. 新建chat数据库，导入chat.sql
 
-![](http://bg.caixiaoxin.cn/wp-content/uploads/2021/12/chat-content-300x206.png)
+3. 启动 websocket服务 
+```
+-> php start.php start
+```
+4. 新建两个浏览器窗口，模拟两人聊天
+![](http://blog.caixiaoxin.cn/wp-content/uploads/2022/01/chat-1024x790.jpg)
+
+5. 85号客服的聊天列表
+![](http://blog.caixiaoxin.cn/wp-content/uploads/2022/01/chat-lists.jpg)
+

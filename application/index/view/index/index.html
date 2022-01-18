@@ -63,7 +63,7 @@
 
     var online = 0;
 
-    var API_URL = "http://chat2.com/index.php?s=/api/Chat/";
+    var API_URL = "http://chat.com/index.php?s=/api/Chat/";
 
     var ws = new WebSocket("ws://127.0.0.1:8282");
     ws.onmessage = function (e) {
@@ -83,12 +83,12 @@
             case "text":
                 if (toid==message.fromid) {
                     $(".chat-content").append('<div class="chat-text section-left flex"><span class="char-img" style="background-image: url('+to_head+')"></span><span class="text"><i class="icon icon-sanjiao4 t-32"></i>'+replace_em(message.data)+'</span></div>');
-                    $(".chat-content").scrollTop(3000);
+                    $(".chat-content").scrollTop(300000);
                 }
                 return;
             case "say_img":
                 $(".chat-content").append('<div class="chat-text section-left flex"><span class="char-img" style="background-image: url('+to_head+')"></span><span class="text"><i class="icon icon-sanjiao4 t-32"></i><img width="120em" height="120em" src="__ROOT__/uploads/'+message.img_name+'"></span></div>');
-                $(".chat-content").scrollTop(3000);
+                $(".chat-content").scrollTop(300000);
                 return;
             case "save":
                 save_message(message);
@@ -120,7 +120,7 @@
 
         $(".chat-content").append('<div class="chat-text section-right flex"><span class="text"><i class="icon icon-sanjiao3 t-32"></i>'+replace_em(text)+'</span><span class="char-img" style="background-image: url('+from_head+')"></span></div>');
 
-        $(".chat-content").scrollTop(3000);
+        $(".chat-content").scrollTop(300000);
 
         ws.send(message);
 
@@ -202,7 +202,7 @@
                         }
                     }
                 })
-                $(".chat-content").scrollTop(3000);
+                $(".chat-content").scrollTop(300000);
             },"json"
         )
     };
@@ -270,7 +270,7 @@
                 if (data.status == 'ok') {
                     $(".chat-content").append('<div class="chat-text section-right flex"><span class="text"><i class="icon icon-sanjiao3 t-32"></i><img width="120em" height="120em" src="__ROOT__/uploads/'+data.img_name+'"></span><span class="char-img" style="background-image: url('+from_head+')"></span></div>');
 
-                    $(".chat-content").scrollTop(3000);
+                    $(".chat-content").scrollTop(300000);
 
                     var message = '{"data":"'+data.img_name+'", "fromid":"'+fromid+'", "toid":"'+toid+'", "type":"say_img"}';
                     $("#file").val("");
