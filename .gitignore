@@ -1,7 +1,6 @@
 .idea
 composer.lock
 *.log
-thinkphp
 runtime
 .DS_Store
 */.DS_Store
