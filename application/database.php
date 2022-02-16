@@ -15,7 +15,7 @@ return [
     // 服务器地址
     'hostname'        => '172.17.0.2',
     // 数据库名
-    'database'        => 'chat',
+    'database'        => 'customer-chat-system',
     // 用户名
     'username'        => 'root',
     // 密码
